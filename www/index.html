@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="VadimoshaFanfics">
 <!--
   * Please see the included README.md file for license terms and conditions.
   -->
@@ -18,13 +18,24 @@
 
     <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
     <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
-    <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
     <!-- <script src="xdk/init-dev.js"></script> -->     <!-- normalizes device and document ready events, see README for details -->
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="fanfics.json"></script>
+    <script src="js/app.js"></script>
 </head>
 
-<body>
+<body ng-controller="FanficsCtrl">
 
-    <p>Hello, Intel XDK!</p>
+<div class="bar bar-header bar-positive">
+    <h1 class="title">Fanfics by Vadimosha</h1>
+</div>
+
+<ion-content class="has-header">
+    <div ng-repeat="b in buttons">
+        <button class="button">{{b.title}}</button>
+    </div>
+</ion-content>
 
 </body>
 </html>
