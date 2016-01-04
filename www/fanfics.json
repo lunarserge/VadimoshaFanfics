@@ -1,4 +1,10 @@
 titles = [
-    {'title': 'Adventures of the Minecrafters 2: Теория Макса'},
-    {'title': 'Adventures of the Minecrafters: Ultimate edition'}
+    {
+        'title': 'Adventures of the Minecrafters 2: Теория Макса',
+        'text': 'Text 1'
+    },
+    {
+        'title': 'Adventures of the Minecrafters: Ultimate edition',
+        'text': 'Text 2'
+    }
 ];

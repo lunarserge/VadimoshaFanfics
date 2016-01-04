@@ -49,8 +49,39 @@ document.addEventListener("deviceready", onAppReady, false) ;
 // NOTE: change "dev.LOG" in "init-dev.js" to "true" to enable some console.log
 // messages that can help you debug Cordova app initialization issues.
 
-
 var VadimoshaFanfics = angular.module('VadimoshaFanfics', ['ionic']);
-VadimoshaFanfics.controller('FanficsCtrl', function ($scope){
-    $scope.buttons = titles;
+
+VadimoshaFanfics.factory('FanficsService', function() {
+    return {
+        titles: titles,
+        getTitle: function(index) {
+            return titles[index];
+        }
+    };
+});
+
+VadimoshaFanfics.controller('FanficsCtrl', function($scope, FanficsService) {
+    $scope.buttons = FanficsService.titles;
+});
+
+VadimoshaFanfics.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('home', {
+        url: '/home',
+        views: {
+            home: {
+                templateUrl: 'home.html'
+            }
+        }
+    });
+
+    $stateProvider.state('fanfic', {
+        url: '/fanfic',
+        views: {
+            fanfic: {
+                templateUrl: 'fanfic.html'
+            }
+        }
+    })
 });
