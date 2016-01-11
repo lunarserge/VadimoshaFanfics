@@ -1,10 +1,18 @@
 titles = [
     {
+        'title': 'Трансформеры Прайм: Возрождение',
+        'text': 'Text 4'
+    },
+    {
+        'title': 'Adventures of the Minecrafters 3: Смерть не так плоха',
+        'text': 'Text 3'
+    },
+    {
         'title': 'Adventures of the Minecrafters 2: Теория Макса',
-        'text': 'Text 1'
+        'text': 'Text 2'
     },
     {
         'title': 'Adventures of the Minecrafters: Ultimate edition',
-        'text': 'Text 2'
+        'text': 'Text 1'
     }
 ];
